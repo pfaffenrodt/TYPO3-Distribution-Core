@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Helhum\\TYPO3\\Distribution\\": "src"
+            "Pfaffenrodt\\TYPO3\\Distribution\\": "src"
         }
     },
     "replace": {
