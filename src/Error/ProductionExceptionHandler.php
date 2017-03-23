@@ -1,5 +1,5 @@
 <?php
-namespace Helhum\TYPO3\Distribution\Error;
+namespace Pfaffenrodt\TYPO3\Distribution\Error;
 
 /**
  * A quiet exception handler which catches but ignores any exception.

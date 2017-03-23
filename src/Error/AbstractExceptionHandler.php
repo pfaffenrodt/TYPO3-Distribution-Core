@@ -1,5 +1,5 @@
 <?php
-namespace Helhum\TYPO3\Distribution\Error;
+namespace Pfaffenrodt\TYPO3\Distribution\Error;
 
 use TYPO3\CMS\Core\Error\ExceptionHandlerInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
