@@ -13,9 +13,13 @@ class ConfigLoaderFactory
      * @param string $fixedCacheIdentifier
      * @return \Helhum\ConfigLoader\CachedConfigurationLoader
      */
-    public static function buildLoader($context, $rootDir, $fixedCacheIdentifier = null, array $additionalFileWatches = array()) {
-        $confDir = $rootDir . '/conf';
-        $cacheDir = $rootDir . '/var/cache';
+    public static function buildLoader($context, $rootDir, $fixedCacheIdentifier = null, array $additionalFileWatches = array(), $usePrivateDirPattern = false) {
+        $privateRootDir = $rootDir;
+        if($usePrivateDirPattern) {
+            $privateRootDir .= '/private';
+        }
+        $confDir = $privateRootDir . '/conf';
+        $cacheDir = $privateRootDir . '/var/cache';
         if ($fixedCacheIdentifier) {
             // Freeze configuration with fixed identifier if requested
             $cacheIdentifier = $fixedCacheIdentifier;
@@ -24,7 +28,7 @@ class ConfigLoaderFactory
                 [
                     $rootDir . '/web/typo3conf/LocalConfiguration.php',
                     $rootDir . '/web/typo3conf/AdditionalConfiguration.php',
-                    $rootDir . '/.env',
+                    $privateRootDir . '/.env',
                     $confDir . '/default.php',
                     $confDir . '/' . $context . '.php',
                     $confDir . '/override.php',
