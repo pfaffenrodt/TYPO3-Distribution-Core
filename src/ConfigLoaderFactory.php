@@ -18,7 +18,7 @@ class ConfigLoaderFactory
         if($usePrivateDirPattern) {
             $privateRootDir .= '/private';
         }
-        $confDir = $privateRootDir . '/conf';
+        $confDir = $privateRootDir . '/config';
         $cacheDir = $privateRootDir . '/var/cache';
         if ($fixedCacheIdentifier) {
             // Freeze configuration with fixed identifier if requested
