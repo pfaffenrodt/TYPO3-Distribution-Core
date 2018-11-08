@@ -8,7 +8,7 @@
     "description" : "Core of TYPO3 CMS Distribution with console and .env support",
     "homepage": "https://github.com/pfaffenrodt/TYPO3-Distribution",
     "require": {
-        "typo3/cms": "^7.6 || ^8.0",
+        "typo3/cms": "^7.6 || ^8.0 || ^9.5",
         "helhum/config-loader": "^0.1"
     },
     "require-dev": {
